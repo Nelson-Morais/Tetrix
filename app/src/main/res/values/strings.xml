@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TetriX</string>
+    <string name="your_score">YOUR SCORE:</string>
+    <string name="_zero">0</string>
+</resources>

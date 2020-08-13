@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.GameActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:orientation="horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_main2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+    </ImageView>
+
+
+    <ImageButton
+        android:id="@+id/Button_Pause"
+        android:layout_width="28dp"
+        android:layout_height="30dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="57dp"
+        android:background="@drawable/custom_pausebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/Button_Right"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@id/game"
+        app:layout_constraintStart_toEndOf="@id/Button_Left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/custom_rightbutton"
+        tools:ignore="NotSibling" />
+
+    <ImageButton
+        android:id="@+id/Button_Left"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@id/game"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/custom_leftbutton"
+        tools:ignore="NotSibling" />
+
+    <ImageButton
+        android:id="@+id/Button_Down"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@+id/Button_Rotation"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toEndOf="@+id/Button_Right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game"
+        app:srcCompat="@drawable/custom_downbutton"
+        tools:ignore="NotSibling" />
+
+    <ImageButton
+        android:id="@+id/Button_Rotation"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="60dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toEndOf="@id/Button_Down"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game"
+        app:srcCompat="@drawable/custom_rotatebutton"
+        tools:ignore="NotSibling" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/GameScreen"
+        android:layout_width="345dp"
+        android:layout_height="520dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background">
+
+        <LinearLayout
+            android:id="@+id/game"
+            android:layout_width="261dp"
+            android:layout_height="520dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/next"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="70dp"
+            tools:ignore="MissingConstraints"
+            android:src="@drawable/next_frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            android:foregroundGravity="center"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="160dp"
+            tools:ignore="MissingConstraints"
+            android:src="@drawable/highscore_frame"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="220dp"
+            tools:ignore="MissingConstraints"
+            android:src="@drawable/score_frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="280dp"
+            tools:ignore="MissingConstraints"
+            android:src="@drawable/level_frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            />
+
+
+
+        <TextView
+            android:id="@+id/Score"
+            android:layout_width="83dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="256dp"
+            android:text="000000"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/HighScore"
+            android:layout_width="83dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="196dp"
+            android:text="000000"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Level"
+            android:layout_width="83dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="316dp"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/NextField"
+            android:layout_width="80dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/next">
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
